@@ -1,0 +1,32 @@
+{
+  "name": "taxis-libres",
+  "version": "1.0.0",
+  "description": "Landing page for Hackathon 2022 by Taxis libres",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run watch:all",
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+  },
+  "keywords": [
+    "Landing",
+    "page",
+    "taxis",
+    "libres",
+    "hackathon"
+  ],
+  "author": "Arnoldo Sanchez N.",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "node-sass": "^7.0.1",
+    "onchange": "^7.1.0",
+    "parallelshell": "^3.0.2"
+  },
+  "dependencies": {
+    "simplycountdown.js": "^1.7.0"
+  }
+}
