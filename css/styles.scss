@@ -76,12 +76,17 @@ h1{
     0 0 40px $color-green,
     0 0 80px $color-green;
 }
-
+.btn-inscription:active{
+    background: $color-green;
+}
 // Modal inscripción Hackathon
 .modal{
     color: #000;
     .modal-header{
         background: #e5e7eb;
+    }
+    .enviar{
+        background: $color-green;
     }
 }
 

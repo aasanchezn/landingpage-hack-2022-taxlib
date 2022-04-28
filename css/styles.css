@@ -52,10 +52,15 @@ h1 {
   background: #C3DC00;
   box-shadow: 0 0 10px #C3DC00, 0 0 40px #C3DC00, 0 0 80px #C3DC00; }
 
+.btn-inscription:active {
+  background: #C3DC00; }
+
 .modal {
   color: #000; }
   .modal .modal-header {
     background: #e5e7eb; }
+  .modal .enviar {
+    background: #C3DC00; }
 
 .row-container {
   position: relative;
