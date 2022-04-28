@@ -145,3 +145,20 @@ h1 {
   width: 2px;
   height: 244px;
   border-right: 2px solid #1c3782; }
+
+.patrocinadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  grid-auto-rows: 7rem;
+  gap: 1rem; }
+  .patrocinadores .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+  .patrocinadores .wide {
+    grid-column: span 2; }
+
+.footer {
+  background: #eaff4e; }
+  .footer i {
+    color: #000; }
