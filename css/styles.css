@@ -8,25 +8,11 @@ body {
   color: #fff;
   font-size: 1.2em; }
 
-@keyframes backanimated {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
 h1 {
   color: #C3DC00;
   font-family: fontTablero, sans-serif;
-  letter-spacing: 10px; }
-
-header h2 {
-  color: #fff; }
-
-header {
-  display: flex;
-  justify-content: center; }
+  letter-spacing: 10px;
+  display: inline-block; }
 
 .count {
   color: #fff;
@@ -55,54 +41,40 @@ header {
   .count .simply-minutes-section, .count .simply-seconds-section {
     display: none; }
 
-.simply-section:hover {
-  animation: uploadTime 1s infinite; }
+.btn-inscription {
+  font-family: 'Nunito', sans-serif;
+  color: #000;
+  font-size: 1.2em;
+  background: #C3DC00;
+  border: none; }
 
-@keyframes uploadTime {
-  0% {
-    border-left: 0.3rem solid #3b4203;
-    border-right: 0.3rem solid transparent;
-    border-top: 0.3rem solid transparent;
-    border-bottom: 0.3rem solid transparent; }
-  25% {
-    border-left: 0.3rem solid #3b4203;
-    border-right: 0.3rem solid transparent;
-    border-top: 0.3rem solid transparent;
-    border-bottom: 0.3rem solid transparent; }
-  50% {
-    border-top: 0.3rem solid #3b4203;
-    border-bottom: 0.3rem solid transparent;
-    border-left: 0.3rem solid transparent;
-    border-right: 0.3rem solid transparent; }
-  75% {
-    border-right: 0.3rem solid #3b4203;
-    border-top: 0.3rem solid transparent;
-    border-left: 0.3rem solid transparent;
-    border-bottom: 0.3rem solid transparent; }
-  100% {
-    border-bottom: 0.3rem solid #3b4203;
-    border-top: 0.3rem solid transparent;
-    border-right: 0.3rem solid transparent;
-    border-left: 0.3rem solid transparent; } }
+.btn-inscription:hover {
+  background: #C3DC00;
+  box-shadow: 0 0 10px #C3DC00, 0 0 40px #C3DC00, 0 0 80px #C3DC00; }
 
-.row {
+.modal {
+  color: #000; }
+  .modal .modal-header {
+    background: #e5e7eb; }
+
+.row-container {
   position: relative;
   margin-bottom: 5rem; }
-  .row .corner {
+  .row-container .corner {
     position: absolute;
     border-top: 4px solid #C3DC00;
     border-left: 4px solid #C3DC00;
-    height: 6rem;
-    width: 6rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 4%; }
-    .row .corner .triangle {
+    .row-container .corner .triangle {
       position: absolute;
       top: 0;
       left: 0;
       height: 2rem;
       width: 2rem;
       background: #C3DC00; }
-    .row .corner .across-t {
+    .row-container .corner .across-t {
       position: absolute;
       left: 9.4px;
       top: 9.4px;
@@ -110,46 +82,48 @@ header {
       transform: rotate(45deg);
       height: 2.82843rem;
       width: 2.82843rem; }
-  .row .corner:nth-child(1) {
+  .row-container .corner:nth-child(1) {
     left: 0;
     top: 0; }
-  .row .corner:nth-child(2) {
+  .row-container .corner:nth-child(2) {
     right: 0;
     top: 0;
     transform: rotate(90deg); }
-  .row .corner:nth-child(3) {
+  .row-container .corner:nth-child(3) {
     left: 0;
     bottom: 0;
     transform: rotate(-90deg); }
-  .row .corner:nth-child(4) {
+  .row-container .corner:nth-child(4) {
     right: 0;
     bottom: 0;
     transform: rotate(180deg); }
 
-.btn-inscription {
-  font-family: 'Nunito', sans-serif;
-  color: #000;
-  font-size: 1.2em;
-  background: #C3DC00;
-  border: none;
-  transition: 0.1s; }
-  .btn-inscription span {
-    position: absolute;
-    display: block; }
-  .btn-inscription span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, black); }
-
-.btn-inscription:hover {
-  background: #C3DC00;
-  box-shadow: 0 0 10px #C3DC00, 0 0 40px #C3DC00, 0 0 80px #C3DC00;
-  transition-delay: 1s; }
-  .btn-inscription:hover span:nth-child(1) {
-    left: 100%;
-    transition: 1s; }
+.main-info {
+  padding: 0; }
+  .main-info li {
+    display: inline-block; }
+    .main-info li div {
+      height: 1rem;
+      width: 1rem;
+      /* outline: 1px solid; */
+      display: inline-block;
+      border-radius: 50%;
+      background: #c3dc00;
+      position: relative; }
+      .main-info li div div {
+        height: 0.6rem;
+        width: 0.3rem;
+        /* outline: 1px solid; */
+        margin: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0.2rem;
+        transform: rotate(49deg);
+        border-bottom: 2px solid #031a57;
+        border-right: 2px solid #031a57;
+        border-radius: initial; }
 
 .hackgroup {
   background: linear-gradient(rgba(1, 16, 57, 0.5), rgba(1, 16, 57, 0.6)), url(../img/images.jpeg) no-repeat;
@@ -161,8 +135,3 @@ header {
   width: 400px;
   margin: 2rem auto;
   margin-bottom: 1rem; }
-
-.modal {
-  color: #000; }
-  .modal .modal-header {
-    background: #e5e7eb; }
